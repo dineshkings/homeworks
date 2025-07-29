@@ -1,0 +1,46 @@
+🚨 Disaster Recovery (DR) – EC2 Backup & Restore Steps (Extended to End with Deletion) 🚨
+🖥️ Installed NGINX on EC2 Instance
+
+💻 Ran: dnf install nginx -y # Install NGINX package
+
+⚡ Started NGINX: systemctl start nginx # Kick off the service
+
+✅ Checked NGINX status: systemctl status nginx # Verify it's running smoothly
+
+🔒 Enabled NGINX to auto-start: systemctl enable nginx # Ensure it boots up automatically
+
+📸 Created an AMI (Amazon Machine Image) from the Instance
+
+🌟 Successfully created image with name: imagefromec2 # Backup of the configured instance
+
+🚀 Launched EC2 Instance from Custom AMI
+
+🆕 New EC2 instance launched using the custom AMI # Restore test begins!
+
+🏷️ Name given to new instance: buildedfromcustomimage # Easy to identify
+
+🔗 Connected to the Custom Image EC2 Instance
+
+🖱️ Used MobaXterm Personal 25.2 for SSH connection # Secure access
+
+👀 Checked NGINX status on new instance to confirm it runs after restore # All good? ✅
+
+💾 Created a Snapshot
+
+📸 Generated a snapshot of the EC2 instance for additional backup # Extra layer of protection
+
+🌠 Created Image from Snapshot
+
+🖼️ Created a new image using the snapshot for further recovery options # More restore flexibility
+
+🧹 Cleanup and Deletion Steps (Till the End)
+
+🛑 Terminated the restored EC2 instance: Used AWS Console or CLI command aws ec2 terminate-instances --instance-ids <instance-id> # Shut down buildedfromcustomimage to free resources
+
+❌ Deregistered the custom AMI: Ran aws ec2 deregister-image --image-id <ami-id> for imagefromec2 # Remove the image reference
+
+🗑️ Deleted the snapshot: Executed aws ec2 delete-snapshot --snapshot-id <snapshot-id> # Clean up storage to avoid charges
+
+🔍 Verified deletions: Checked AWS Console for no lingering resources (e.g., no running instances, AMIs, or snapshots) # Double-check everything's gone
+
+💰 Cost optimization tip: Monitor AWS Cost Explorer to ensure no unexpected bills from test resources
