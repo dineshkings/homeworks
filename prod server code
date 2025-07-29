@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo -e "\n"
+
+echo "===== PROD SERVER DETAILS ====="
+
+# Hostname / Node
+echo -e "\n Node Name:"
+hostname
+
+# OS version
+echo -e "\n OS Info:"
+cat /etc/os-release
+
+# CPU Info
+echo -e "\n CPU Info:"
+lscpu
+
+# RAM Info
+echo -e "\n RAM Info:"
+free -h
+
+# Disk Info
+echo -e "\n Disk Info:"
+df -Th
+
+echo -e "\n"
+
+lsblk
+
+echo -e "\n===== END OF REPORT ====="
