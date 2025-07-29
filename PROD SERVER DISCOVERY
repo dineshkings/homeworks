@@ -1,0 +1,43 @@
+[root@ip-172-31-6-58 kumar]# ./123.sh
+
+===== PROD SERVER DISCOVERY =====
+
+ Report Generated on: Tue Jul 29 11:06:36 UTC 2025
+
+🔹 Node / Hostname:
+ip-172-31-6-58.ap-south-1.compute.internal
+
+🔹 Operating System Info:
+NAME="Amazon Linux"
+VERSION="2023"
+ID="amzn"
+ID_LIKE="fedora"
+VERSION_ID="2023"
+PLATFORM_ID="platform:al2023"
+PRETTY_NAME="Amazon Linux 2023.8.20250721"
+ANSI_COLOR="0;33"
+CPE_NAME="cpe:2.3:o:amazon:amazon_linux:2023"
+HOME_URL="https://aws.amazon.com/linux/amazon-linux-2023/"
+DOCUMENTATION_URL="https://docs.aws.amazon.com/linux/"
+SUPPORT_URL="https://aws.amazon.com/premiumsupport/"
+BUG_REPORT_URL="https://github.com/amazonlinux/amazon-linux-2023"
+VENDOR_NAME="AWS"
+VENDOR_URL="https://aws.amazon.com/"
+SUPPORT_END="2029-06-30"
+
+🔹 CPU Info:
+CPU(s):                                  1
+Model name:                              Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+
+🔹 RAM Info :
+Mem:           949Mi       126Mi       492Mi       0.0Ki       330Mi       679Mi
+
+🔹 Disk Info :
+Filesystem     Type      Size  Used Avail Use% Mounted on
+/dev/xvda1     xfs       8.0G  1.6G  6.4G  20% /
+/dev/xvda128   vfat       10M  1.3M  8.7M  13% /boot/efi
+
+🔹 Uptime & Load:
+ 11:06:36 up 30 min,  2 users,  load average: 0.00, 0.02, 0.00
+
+===== END OF PROD DISCOVERY REPORT =====
